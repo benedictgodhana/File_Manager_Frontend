@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-toolbar color="white">
-      <v-btn @click="$router.push('/files')" icon>
+      <v-btn @click="$router.push('/')" icon>
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
       <v-toolbar-title>Upload Files</v-toolbar-title>
