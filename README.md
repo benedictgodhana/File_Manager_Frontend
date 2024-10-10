@@ -5,7 +5,7 @@ Here's the updated version for a file management system using Vuetify as the fou
 This is a customizable scaffolding tool for building a file management system with Vuetify. The template includes a base structure for managing, uploading, and organizing files, and it's configured with all the necessary tools and optimizations to streamline your development process.
 
 
-![File Manager System Screenshot](src/assets/Screenshot from 2024-10-10 08-05-00.png)
+![File Manager System Screenshot](./public/images/Screenshot from 2024-10-10 08-05-00.png)
 
 ## ❗️ Important Links
 
