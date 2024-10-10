@@ -7,6 +7,9 @@ This is a customizable scaffolding tool for building a file management system wi
 
 ![File Manager System Screenshot](./public/images/file-manager-screenshot.png)
 
+![File Manager System Screenshot](./public/images/file-manager-screenshot1.png)
+
+
 ## ❗️ Important Links
 
 - 📄 [Vuetify Docs](https://vuetifyjs.com/)
