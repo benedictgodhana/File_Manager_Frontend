@@ -1,6 +1,33 @@
-# Vuetify (Default)
+# File Management System Frontend
 
-This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
+<p align="center">
+  <a href="https://vuetifyjs.com" target="_blank">
+    <img src="https://vuetifyjs.com/images/logos/logo.svg" width="200" alt="Vuetify Logo">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/vuetifyjs/vuetify">
+    <img src="https://img.shields.io/github/stars/vuetifyjs/vuetify" alt="Stars">
+  </a>
+  <a href="https://npmjs.com/package/vuetify">
+    <img src="https://img.shields.io/npm/v/vuetify" alt="Version">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  </a>
+</p>
+
+## About the File Management System Frontend
+
+This project provides the frontend for the **File Management System**, built using Vue.js and Vuetify to offer a smooth and responsive UI. The system enables users to upload, manage, and access files efficiently through RESTful APIs provided by the backend.
+
+### Key Features
+
+- **File Management**: Users can upload, download, and manage their files directly from the user interface.
+- **Directory Organization**: Create, rename, and delete directories for easy file organization.
+- **Search Functionality**: Quickly find files using the search tool.
+- **Responsive Design**: Fully optimized for desktop and mobile devices using Vuetify components.
 
 ## ❗️ Important Links
 
@@ -10,7 +37,7 @@ This is the official scaffolding tool for Vuetify, designed to give you a head s
 - 🎮 [Playground](https://play.vuetifyjs.com/)
 - 💬 [Discord](https://community.vuetifyjs.com)
 
-## 💿 Install
+## 💿 Installation
 
 Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
 
@@ -21,17 +48,17 @@ Set up your project using your preferred package manager. Use the corresponding 
 | [pnpm](https://pnpm.io/installation)                          | `pnpm install` |
 | [bun](https://bun.sh/#getting-started)                        | `bun install`  |
 
-After completing the installation, your environment is ready for Vuetify development.
+After installation, your environment is set up for development.
 
 ## ✨ Features
 
-- 🖼️ **Optimized Front-End Stack**: Leverage the latest Vue 3 and Vuetify 3 for a modern, reactive UI development experience. [Vue 3](https://v3.vuejs.org/) | [Vuetify 3](https://vuetifyjs.com/en/)
-- 🗃️ **State Management**: Integrated with [Pinia](https://pinia.vuejs.org/), the intuitive, modular state management solution for Vue.
-- 🚦 **Routing and Layouts**: Utilizes Vue Router for SPA navigation and vite-plugin-vue-layouts for organizing Vue file layouts. [Vue Router](https://router.vuejs.org/) | [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
-- ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
-- 🧩 **Automated Component Importing**: Streamline your workflow with unplugin-vue-components, automatically importing components as you use them. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
+- 🖼️ **Optimized Front-End Stack**: Utilizes the latest **Vue 3** and **Vuetify 3** to create a modern and reactive UI. [Vue 3](https://v3.vuejs.org/) | [Vuetify 3](https://vuetifyjs.com/en/)
+- 🗃️ **State Management**: Integrated with **Pinia**, the simple and efficient state management solution. [Pinia](https://pinia.vuejs.org/)
+- 🚦 **Routing and Layouts**: Uses **Vue Router** for SPA navigation and **vite-plugin-vue-layouts** for managing layouts. [Vue Router](https://router.vuejs.org/) | [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
+- ⚡ **Next-Gen Tooling**: Powered by **Vite**, providing fast cold starts and Hot Module Replacement (HMR). [Vite](https://vitejs.dev/)
+- 🧩 **Automated Component Importing**: Uses **unplugin-vue-components** for automated component importing. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
 
-These features are curated to provide a seamless development experience from setup to deployment, ensuring that your Vuetify application is both powerful and maintainable.
+These features ensure a seamless development experience from setup to deployment, making your application powerful and maintainable.
 
 ## 💡 Usage
 
@@ -39,41 +66,58 @@ This section covers how to start the development server and build your project f
 
 ### Starting the Development Server
 
-To start the development server with hot-reload, run the following command. The server will be accessible at [http://localhost:3000](http://localhost:3000):
+To start the development server with hot-reload, run the following command:
 
 ```bash
-yarn dev
-```
+npm run dev
+(You can replace npm with yarn, pnpm, or bun depending on your package manager.)
 
-(Repeat for npm, pnpm, and bun with respective commands.)
-
-> Add NODE_OPTIONS='--no-warnings' to suppress the JSON import warnings that happen as part of the Vuetify import mapping. If you are on Node [v21.3.0](https://nodejs.org/en/blog/release/v21.3.0) or higher, you can change this to NODE_OPTIONS='--disable-warning=5401'. If you don't mind the warning, you can remove this from your package.json dev script.
-
-### Building for Production
+The server will be accessible at http://localhost:3000.
+Building for Production
 
 To build your project for production, use:
 
-```bash
-yarn build
-```
+bash
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+npm run build
 
-Once the build process is completed, your application will be ready for deployment in a production environment.
+Once the build process completes, your application will be ready for deployment.
+API Integration
 
-## 💪 Support Vuetify Development
+The frontend interacts with the backend File Management System via API for performing file-related operations. Below are the available API endpoints used:
 
-This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
+    Upload File: POST /api/files/upload
+    Download File: GET /api/files/:id/download
+    List Files: GET /api/files
+    Search Files: GET /api/files/search?q=query
 
-- [Requesting Enterprise Support](https://support.vuetifyjs.com/)
-- [Sponsoring John on Github](https://github.com/users/johnleider/sponsorship)
-- [Sponsoring Kael on Github](https://github.com/users/kaelwd/sponsorship)
-- [Supporting the team on Open Collective](https://opencollective.com/vuetify)
-- [Becoming a sponsor on Patreon](https://www.patreon.com/vuetify)
-- [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
-- [Making a one-time donation with Paypal](https://paypal.me/vuetify)
+Ensure the backend is running for proper functionality.
+💪 Support Vuetify Development
 
-## 📑 License
-[MIT](http://opensource.org/licenses/MIT)
+This project is built with Vuetify, a UI Library that contains a wide range of Vue components. Vuetify is an MIT licensed Open Source project supported by sponsors and contributors. If you wish to support the Vuetify project, consider:
 
-Copyright (c) 2016-present Vuetify, LLC
+    Requesting Enterprise Support
+    Sponsoring John on Github
+    Sponsoring Kael on Github
+    Supporting the team on Open Collective
+    Becoming a sponsor on Patreon
+    Becoming a subscriber on Tidelift
+    Making a one-time donation with Paypal
+
+📑 License
+
+MIT
+
+© 2016-present Vuetify, LLC
+
+markdown
+
+
+### Key Sections
+- **Vuetify Setup**: Added details about Vuetify features and links to documentation.
+- **Installation and Usage**: Clear commands for setting up the project and running the development server.
+- **API Integration**: Highlights the integration with the backend through various API endpoints.
+- **Support Vuetify**: Links to support Vuetify development, keeping in line with the original scaffolding format.
+
+This README offers a clear and comprehensive guide for your file management system frontend, using Vuetify.
+
